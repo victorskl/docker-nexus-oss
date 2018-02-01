@@ -15,6 +15,8 @@ open -a Safari http://localhost:8082
 admin:admin123
 ```
 
+- Nexus data persist into `./nexus-data`
+
 OSS Limitation
 
 - Allow ___all___ component/package formats
