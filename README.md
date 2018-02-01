@@ -15,7 +15,18 @@ open -a Safari http://localhost:8082
 admin:admin123
 ```
 
-- Nexus data persist into `./nexus-data`
+Persistent Data
+
+- Nexus data persist into `./nexus-data`. This directory will auto created if not present.
+- On macOS, no special permission need to be set.
+- However, on Linux, it is better to create this directory and give the ownership as follow:
+    ```
+    git clone https://github.com/victorskl/docker-nexus-oss.git
+    cd docker-nexus-oss
+    mkdir nexus-data && chown -R 200 ./nexus-data
+    docker-compose --project-name=dev build
+    docker-compose --project-name=dev up -d
+    ```
 
 OSS Limitation
 
