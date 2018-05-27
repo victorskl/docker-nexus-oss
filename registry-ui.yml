@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+
+  registry_ui:
+    image: konradkleine/docker-registry-frontend:v2
+    ports:
+      - 8888:80
+    env_file:
+      - .env
+    environment:
+      ENV_DOCKER_REGISTRY_HOST: nexus
+      ENV_DOCKER_REGISTRY_PORT: 5000
+    restart: always
